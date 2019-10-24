@@ -31,6 +31,9 @@ class Ninio{
 		return cantDeCaramelos > 15
 	}
 	//Punto 3
+	method cantDeCaramelos() = cantDeCaramelos
+	
+	method elementos() = elementos
 	
 	
 }
