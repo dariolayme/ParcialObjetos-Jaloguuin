@@ -14,6 +14,8 @@ class Ninio{
 			elemento => elemento.poderDeSusto()
 		})
 	}
+	
+	//Punto 2  ⬇⬇
 	method asustarA(unAdulto){
 		unAdulto.serAsustadoPor(self)
 	}
