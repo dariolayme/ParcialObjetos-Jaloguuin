@@ -1,3 +1,6 @@
+//Ninio comparte interfaz con Legion : Asustador
+
+
 class Ninio{
 	
 	var elementos =[]
@@ -27,6 +30,7 @@ class Ninio{
 	method tieneMuchosCaramelos() {
 		return cantDeCaramelos > 15
 	}
+	//Punto 3
 	
 	
 }

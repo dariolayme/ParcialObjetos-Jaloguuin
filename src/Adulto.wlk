@@ -4,12 +4,12 @@ class Adulto{
 	
 	method tolerancia() = 10*cantDeNiniosConMuchosCaramelos
 	
-	method serAsustadoPor(unNinio) {
-		if(self.puedeSerAsustadoPor(unNinio)){
+	method serAsustadoPor(unAsustador) {
+		if(self.puedeSerAsustadoPor(unAsustador)){
 			
-			unNinio.recibirCaramelos(self.cantidadDeCaramelosAEntregar())
+			unAsustador.recibirCaramelos(self.cantidadDeCaramelosAEntregar())
 		}
-		if(unNinio.tieneMuchosCaramelos()){
+		if(unAsustador.tieneMuchosCaramelos()){
 			cantDeNiniosConMuchosCaramelos++
 		}	
 		
@@ -19,9 +19,9 @@ class Adulto{
 		return self.tolerancia()/2
 	}
 	
-	method puedeSerAsustadoPor(unNinio){
+	method puedeSerAsustadoPor(unAsustador){
 		
-		return self.tolerancia() < unNinio.capacidadDeAsustar()
+		return self.tolerancia() < unAsustador.capacidadDeAsustar()
 	}
 	
 	
