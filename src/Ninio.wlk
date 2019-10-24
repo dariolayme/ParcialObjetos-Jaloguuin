@@ -1,6 +1,10 @@
 //Ninio comparte interfaz con Legion : Asustador
 
 
+class NinioException inherits Exception{
+
+}
+
 class Ninio{
 	
 	var elementos =[]
@@ -30,10 +34,23 @@ class Ninio{
 	method tieneMuchosCaramelos() {
 		return cantDeCaramelos > 15
 	}
-	//Punto 3
+	
 	method cantDeCaramelos() = cantDeCaramelos
 	
 	method elementos() = elementos
+	//Alimentacion
 	
+	method comerCaramelos(unaCantidad){
+		self.validarCantidadDeCaramelos(unaCantidad)
+		cantDeCaramelos -= unaCantidad
+	}
+	
+	method validarCantidadDeCaramelos(unaCantidad){
+		
+		if(unaCantidad>cantDeCaramelos){
+			
+			throw new NinioException(message = "Cantidad invalida. Tiene que ser Menor o Igual a la cantidad q posea.")
+		}
+	}
 	
 }
